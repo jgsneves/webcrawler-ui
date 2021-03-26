@@ -7,4 +7,5 @@ export const HeaderTag = styled.header`
     max-width: 700px;
     height: 100px;
     margin: 0 auto;
+    background-color: #FFFFFF;
 `;
