@@ -10,7 +10,6 @@ export const Home = () => {
                 <h1>Webcrawler</h1>
                 <h3>Automação na busca de termos na internet</h3>
                 <p>Inicie uma nova busca, ou verifique o resultado de solicitações feitas.</p>
-                <BrowserRouter>
                     <CardsList>
                         <Link 
                             to="/nova-solicitacao"
@@ -31,7 +30,6 @@ export const Home = () => {
                             />
                         </Link>
                     </CardsList>
-                </BrowserRouter>
             </Main>
         </>
     );
