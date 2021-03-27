@@ -12,7 +12,10 @@ export const Home = () => {
                 <p>Inicie uma nova busca, ou verifique o resultado de solicitações feitas.</p>
                 <BrowserRouter>
                     <CardsList>
-                        <Link to="/nova-solicitacao">
+                        <Link 
+                            to="/nova-solicitacao"
+                            style={{textDecoration: "none"}}    
+                        >
                             <Card 
                                 title="Cadastre uma nova inspeção" 
                                 explanation="Abra uma nova pesquisa em toda a web"

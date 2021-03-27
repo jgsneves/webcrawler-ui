@@ -1,5 +1,5 @@
 import React from 'react';
-import {Wrapper, Title} from './styles';
+import {Wrapper} from './styles';
 
 interface IProps {
     title: string;
@@ -9,7 +9,7 @@ interface IProps {
 export const Card = ({explanation, title}: IProps) => {
     return (
         <Wrapper>
-            <Title>{title}</Title>
+            <h4>{title}</h4>
             <p>{explanation}</p>
         </Wrapper>
     );

@@ -11,8 +11,10 @@ export const Wrapper = styled.div`
     &:hover {
         border: 3px solid #F48F42;
     }
-`;
 
-export const Title = styled.h4`
-    margin-bottom: 16px;
+    & > h4 {
+        margin-bottom: 16px;
+        text-decoration: none;
+        color: black;
+    }
 `;
