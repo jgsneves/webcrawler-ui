@@ -10,10 +10,10 @@ export const NewRequest = () => {
     function handleInputChange(e: React.ChangeEvent<HTMLInputElement>) {
         const {id, value} = e.target;
         setFormData({...formData, [id]: value});
-        console.log(formData);
     }
 
-    function formSubmit() {
+    function formSubmit(e: React.FormEvent) {
+        e.preventDefault();
         try {
 
         } catch (error) {
