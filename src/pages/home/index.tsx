@@ -21,10 +21,15 @@ export const Home = () => {
                                 explanation="Abra uma nova pesquisa em toda a web"
                             />
                         </Link>
-                        <Card
-                            title="Consulte uma inspeção"
-                            explanation="Verifique o resultado de sua solicitação"
-                        />
+                        <Link
+                            to="/solicitacoes"
+                            style={{textDecoration: "none"}}
+                        >
+                            <Card
+                                title="Consulte uma inspeção"
+                                explanation="Verifique o resultado de sua solicitação"
+                            />
+                        </Link>
                     </CardsList>
                 </BrowserRouter>
             </Main>

@@ -10,7 +10,7 @@ export const Main = styled.main`
     }
 `;
 
-export const CardsList = styled.ul`
+export const CardsList = styled.nav`
     list-style: none;
     display: flex;
     margin-top: 32px;
