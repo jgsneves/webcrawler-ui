@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Wrapper = styled.button`
+export const Wrapper = styled.div`
     width: 150px;
     border-radius: 6px;
     border: 3px solid black;

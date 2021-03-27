@@ -42,7 +42,7 @@ export const NewRequest = () => {
             </p>
             <form onSubmit={formSubmit}>
                 <label htmlFor="keyword">
-                    <h4>Palavra chave:</h4>
+                    <h4>Palavra-chave:</h4>
                     {errorData.code !== 0 ? <ErrorMessage>{errorData.name}</ErrorMessage> : null}
                     <input 
                         type="text"
