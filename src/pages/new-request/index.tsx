@@ -1,7 +1,10 @@
 import React from 'react';
+import { useRootStore } from '../../provider';
 import {Main, ErrorMessage} from './styles';
 
 export const NewRequest = () => {
+    const {requestStore} = useRootStore();
+
     const [formData, setFormData] = React.useState({
         keyword: ""
     });
@@ -22,11 +25,27 @@ export const NewRequest = () => {
                 method: "POST",
                 headers: requestHeader,
                 body: rawData
-            });
+            }).then(res => res.json());
+            console.log(response);
+            const currentDate = new Date();
+            // const newRequest = {
+            //     "keyword": formData.keyword,
+            //     "id": response!.body!.id,
+            //     "created": currentDate.toLocaleDateString("pt-br"),
+            //     "status": response!.body.
+            // }
+            const newRequest = {
+                "keyword": formData.keyword,
+                "id": response["id"],
+                "created": currentDate.toLocaleDateString("pt-br"),
+                "status": "Criada"
+            }
+
+            requestStore.addRequest(newRequest);
+
             if (response.status >= 204) {
                 throw new Error("Erro no envio, tente novamente.")
             }
-            console.log(response);
         } catch (error) {
             setErrorData({ code: 1, name: error.message});
         }

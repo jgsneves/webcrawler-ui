@@ -1,8 +1,11 @@
 import React from 'react';
+import {useObserver} from "mobx-react";
 import {Main, TableHeader, TableItem} from './styles';
+import { useRootStore } from '../../provider';
 
 export const Solicitations = () => {
-    return (
+    const {requestStore} = useRootStore();
+    return useObserver(() => (
         <Main>
             <h1>Solicitações</h1>
             <p>Confira as solicitações abertas ou busque por palavra-chave</p>
@@ -13,13 +16,15 @@ export const Solicitations = () => {
                     <li>Data de criação</li>
                     <li>Status</li>
                 </TableHeader>
-                <TableItem>
-                    <p>abfdh31</p>
-                    <p>teste</p>
-                    <p>25/03/2021</p>
-                    <p>Active</p>
-                </TableItem>
+                {requestStore.requests.map(request => 
+                    <TableItem key={request.id}>
+                        <p>{request.id}</p>
+                        <p>{request.keyword}</p>
+                        <p>{request.created}</p>
+                        <p>{request.status}</p>
+                    </TableItem>
+                )}
             </article>
         </Main>
-    );
-}
+    ));
+};
