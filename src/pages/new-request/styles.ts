@@ -67,4 +67,5 @@ export const ErrorMessage = styled.p`
     text-align: center;
     font-size: 10px;
     padding: 4px;
+    margin-top: 8px;
 `;
