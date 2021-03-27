@@ -18,7 +18,7 @@ export const NewRequest = () => {
             let requestHeader = new Headers();
             requestHeader.append("Content-Type", "application/json");
             const rawData = JSON.stringify(formData);
-            const response = await fetch("http://testapp.axreng.com:3000/", {
+            const response = await fetch("http://testapp.axreng.com:3000/crawl", {
                 method: "POST",
                 headers: requestHeader,
                 body: rawData

@@ -1,7 +1,7 @@
 import React from 'react';
 import {Main, CardsList} from './styles';
 import { Card } from '../../components/card';
-import { Link, BrowserRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export const Home = () => {
     return (
