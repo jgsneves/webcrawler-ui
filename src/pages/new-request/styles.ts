@@ -8,9 +8,16 @@ export const Main = styled.main`
         margin: 16px 0px 40px 0px;
     }
 
+    & > form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     & > form > label {
         display: flex;
         flex-direction: column;
+        margin-left: -20px;
     }
     
     & > form > label > input {
@@ -20,7 +27,7 @@ export const Main = styled.main`
         letter-spacing: 0.7px;
         display: block;
         min-height: 48px;
-        width: 200px;
+        width: 250px;
         border-top: none;
         border-right: none;
         border-left: none;
@@ -34,6 +41,10 @@ export const Main = styled.main`
         border-radius: 0px;
         resize: none;
     }
+
+    & > form > label > p {
+        margin: 16px 0px;
+    }
 `;
 
 export const ErrorMessage = styled.p`
@@ -46,4 +57,15 @@ export const ErrorMessage = styled.p`
     font-size: 10px;
     padding: 4px;
     margin-top: 8px;
+`;
+
+export const SpinnerWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & > h3 {
+        margin-top: 16px;
+        margin-bottom: 16px;
+    }
 `;

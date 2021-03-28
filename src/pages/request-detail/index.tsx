@@ -30,8 +30,6 @@ export const RequestDetailed = (props: IProps) => {
             setSelectedRequest(fullData);
         });
     }, [id, fromStore.created, fromStore.keyword]);
-    console.log("selectedrequest", selectedRequest);
-    console.log("fromStore", fromStore);
 
     return (
         <Main>
