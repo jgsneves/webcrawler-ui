@@ -3,15 +3,12 @@ import {ButtonStyle} from './styles';
 
 interface IProps extends React.HTMLProps<HTMLButtonElement> {
     secondary?: boolean;
-    text: string;
 }
 
-export const Button = ({secondary, text, type}: IProps) => {
+export const Button = ({secondary, children}: IProps) => {
     return (
-        <ButtonStyle 
-            secondary
-        >
-            {text}
+        <ButtonStyle secondary={secondary}>
+            {children}
         </ButtonStyle>
     );
 }

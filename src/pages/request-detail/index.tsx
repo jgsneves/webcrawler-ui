@@ -57,8 +57,8 @@ export const RequestDetailed = (props: IProps) => {
                     <h3>Resultado:</h3>
                     <ul>
                         {selectedRequest?.urls.map(url =>
-                            <a href={url} target="blank">
-                                <li key={url}>{url}</li>
+                            <a href={url} target="blank" key={url}>
+                                <li>{url}</li>
                             </a> 
                         )}
                     </ul>

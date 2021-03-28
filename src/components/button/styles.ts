@@ -3,10 +3,11 @@ import styled from 'styled-components';
 export const ButtonStyle = styled.button<{secondary?: boolean}>`
     display: inline-block;
     height: 48px;
-    padding: 12px 32px 14px;
+    padding: ${props => props.secondary ? '10px 30px' : '12px 32px'};
+    margin-right: 16px;
     border-radius: 4px;
     text-decoration: none;
-    color: ${props => props.secondary ? '#ff5824' : '#FFFFFF'};
+    color: ${props => props.secondary ? 'black' : '#FFFFFF'};
     background-color: ${props => props.secondary ? '#FFFFFF' : '#ff5824'};
     font-size: 12.6px;
     font-weight: 700;
@@ -15,7 +16,7 @@ export const ButtonStyle = styled.button<{secondary?: boolean}>`
     text-align: center;
     text-transform: uppercase;
     cursor: pointer;
-    border: none;
+    border: ${props => props.secondary ? '2px solid black' : 'none'};
 
     &:hover {
         background-color: #ED4433;

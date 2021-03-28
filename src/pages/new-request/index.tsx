@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { Button } from '../../components/button';
 import { useRootStore } from '../../provider';
 import {Main, ErrorMessage} from './styles';
 
@@ -27,12 +29,6 @@ export const NewRequest = () => {
                 body: rawData
             }).then(res => res.json());
             const currentDate = new Date();
-            // const newRequest = {
-            //     "keyword": formData.keyword,
-            //     "id": response!.body!.id,
-            //     "created": currentDate.toLocaleDateString("pt-br"),
-            //     "status": response!.body.
-            // }
             const newRequest = {
                 "keyword": formData.keyword,
                 "id": response["id"],
@@ -69,7 +65,10 @@ export const NewRequest = () => {
                         onChange={handleInputChange}
                     />
                 </label>
-                <button type="submit">Enviar</button>
+                <Button type="submit">enviar</Button>
+                <Link to="/">
+                    <Button secondary>voltar</Button>
+                </Link>
             </form>
         </Main>
     );
