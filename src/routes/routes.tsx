@@ -1,5 +1,6 @@
 import React from 'react';
 import {Route, Switch} from 'react-router-dom';
+import { Footer } from '../components/footer';
 import { Header } from '../components/header';
 import { Home } from '../pages/home';
 import {NewRequest} from '../pages/new-request';
@@ -16,6 +17,7 @@ const Routes = () => {
                 <Route component={NewRequest} path="/nova-solicitacao"/>
                 <Route component={Home} path="/" exact/>
             </Switch>
+            <Footer />
         </>
     )
 }
