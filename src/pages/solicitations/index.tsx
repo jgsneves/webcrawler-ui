@@ -3,6 +3,7 @@ import {useObserver} from "mobx-react";
 import {Main, TableHeader, TableItem} from './styles';
 import { useRootStore } from '../../provider';
 import { Link } from 'react-router-dom';
+import { Button } from '../../components/button';
 
 export const Solicitations = () => {
     const {requestStore} = useRootStore();
@@ -10,6 +11,9 @@ export const Solicitations = () => {
         <Main>
             <h1>Solicitações</h1>
             <p>Confira as solicitações abertas ou busque por palavra-chave</p>
+            <Link to='/'>
+                <Button>voltar</Button>
+            </Link>
             <article>
                 <TableHeader>
                     <li>id</li>

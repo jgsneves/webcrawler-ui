@@ -31,7 +31,7 @@ html, body, #root {
 
 h1 {
   font-family: 'Inter', sans-serif;
-  font-weight: 800;
+  font-weight: 700;
   font-size: 51px;
   color: var(--black);
 }

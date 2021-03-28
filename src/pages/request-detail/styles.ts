@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Main = styled.main`
     width: 700px;
     margin: 0 auto;
-    padding-bottom: 100px;
+    min-height: 375px;
 
     & > section > div {
         display: flex;

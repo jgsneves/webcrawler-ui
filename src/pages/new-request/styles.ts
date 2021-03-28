@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Main = styled.main`
     margin: 0 auto;
     width: 700px;
-    padding-bottom: 100px;
+    min-height: 375px;
 
     & > p {
         margin: 16px 0px 40px 0px;
@@ -64,6 +64,7 @@ export const SpinnerWrapper = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 50px;
 
     & > h3 {
         margin-top: 16px;
