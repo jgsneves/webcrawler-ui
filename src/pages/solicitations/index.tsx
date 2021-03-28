@@ -2,6 +2,7 @@ import React from 'react';
 import {useObserver} from "mobx-react";
 import {Main, TableHeader, TableItem} from './styles';
 import { useRootStore } from '../../provider';
+import { Link } from 'react-router-dom';
 
 export const Solicitations = () => {
     const {requestStore} = useRootStore();
@@ -16,13 +17,19 @@ export const Solicitations = () => {
                     <li>Data de criação</li>
                     <li>Status</li>
                 </TableHeader>
-                {requestStore.requests.map(request => 
-                    <TableItem key={request.id}>
-                        <p>{request.id}</p>
-                        <p>{request.keyword}</p>
-                        <p>{request.created}</p>
-                        <p>{request.status}</p>
-                    </TableItem>
+                {requestStore.requests.map(request =>
+                    <Link 
+                        to={`/solicitacoes/${request.id}`} 
+                        style={{textDecoration: "none"}}
+                        key={request.id}
+                    >
+                        <TableItem>
+                            <p>{request.id}</p>
+                            <p>{request.keyword}</p>
+                            <p>{request.created}</p>
+                            <p>{request.status}</p>
+                        </TableItem>
+                    </Link> 
                 )}
             </article>
         </Main>

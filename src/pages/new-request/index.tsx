@@ -26,7 +26,6 @@ export const NewRequest = () => {
                 headers: requestHeader,
                 body: rawData
             }).then(res => res.json());
-            console.log(response);
             const currentDate = new Date();
             // const newRequest = {
             //     "keyword": formData.keyword,
@@ -38,7 +37,8 @@ export const NewRequest = () => {
                 "keyword": formData.keyword,
                 "id": response["id"],
                 "created": currentDate.toLocaleDateString("pt-br"),
-                "status": "Criada"
+                "status": "Criada",
+                "urls": []
             }
 
             requestStore.addRequest(newRequest);

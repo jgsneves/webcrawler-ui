@@ -1,10 +1,11 @@
 import {observable, action} from 'mobx';
 
-interface IRequest {
+export interface IRequest {
     id: string;
     keyword: string;
     created: string;
     status: string;
+    urls: string[];
 }
 
 export class RequestStore {
