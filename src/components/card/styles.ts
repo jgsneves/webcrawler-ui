@@ -12,6 +12,11 @@ export const Wrapper = styled.div`
 
     &:hover {
         border: 3px solid #F48F42;
+        background-color: #ff5824;
+
+        & > h4, p {
+            color: #FFFFFF;
+        }
     }
 
     & > h4 {

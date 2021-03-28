@@ -13,6 +13,10 @@ export const Main = styled.main`
     & > p {
         margin-bottom: 32px;
     }
+
+    & > article > a > button {
+        margin-top: 32px;
+    }
 `;
 
 export const TableHeader = styled.ul`

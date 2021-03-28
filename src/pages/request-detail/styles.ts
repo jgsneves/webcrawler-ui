@@ -22,6 +22,10 @@ export const Main = styled.main`
         list-style: none;
     }
 
+    & > section > div > a {
+        margin: 32px 0px;
+    }
+
     & > section > div > ul > a {
         display: flex;
         width: 700px;

@@ -1,5 +1,6 @@
 import React from 'react';
-import {RouteComponentProps} from 'react-router-dom';
+import {Link, RouteComponentProps} from 'react-router-dom';
+import { Button } from '../../components/button';
 import { useRootStore } from '../../provider';
 import {IRequest} from '../../provider/RequestStore';
 import {Main} from './styles';
@@ -60,6 +61,9 @@ export const RequestDetailed = (props: IProps) => {
                             </a> 
                         )}
                     </ul>
+                    <Link to="/solicitacoes">
+                        <Button>Voltar</Button>
+                    </Link>
                 </div>
             </section>
         </Main>

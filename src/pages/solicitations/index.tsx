@@ -11,9 +11,6 @@ export const Solicitations = () => {
         <Main>
             <h1>Solicitações</h1>
             <p>Confira as solicitações abertas ou busque por palavra-chave</p>
-            <Link to='/'>
-                <Button>voltar</Button>
-            </Link>
             <article>
                 <TableHeader>
                     <li>id</li>
@@ -35,6 +32,9 @@ export const Solicitations = () => {
                         </TableItem>
                     </Link> 
                 )}
+            <Link to='/'>
+                <Button>voltar</Button>
+            </Link>
             </article>
         </Main>
     ));
