@@ -15,4 +15,8 @@ export const CardsList = styled.nav`
     list-style: none;
     display: flex;
     margin-top: 32px;
+
+    & > a {
+        margin-right: 32px;
+    }
 `;

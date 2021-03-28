@@ -5,7 +5,6 @@ export const Wrapper = styled.div`
     border-radius: 6px;
     border: 3px solid black;
     padding: 15px 10px;
-    margin: 0px 20px;
     cursor: pointer;
     background-color: #FFFFFF;
     text-align: left;
