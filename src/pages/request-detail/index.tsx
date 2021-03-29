@@ -1,9 +1,12 @@
 import React from 'react';
 import {Link, RouteComponentProps} from 'react-router-dom';
+import { BackIcon } from '../../components/backIcon';
 import { Button } from '../../components/button';
+import { Spinner } from '../../components/spinner';
+import { SucessCheck } from '../../components/sucessCheck';
 import { useRootStore } from '../../provider';
 import {IRequest} from '../../provider/RequestStore';
-import {Main} from './styles';
+import {FixedCTA, Main} from './styles';
 
 type IProps = RouteComponentProps<{id: string}>;
 
@@ -30,8 +33,20 @@ export const RequestDetailed = (props: IProps) => {
             }
             setSelectedRequest(fullData);
         });
-    }, [id, fromStore.created, fromStore.keyword]);
+    }, [id, fromStore.created, fromStore.keyword, selectedRequest]);
 
+    
+    function renderCta() {
+        return (
+                <FixedCTA>
+                    <Link to="/solicitacoes">
+                        {BackIcon()}
+                        <h4>VOLTAR</h4>
+                    </Link>
+                </FixedCTA>
+        );
+    }
+    
     return (
         <Main>
             <h1>Detalhes da solicitação</h1>
@@ -50,10 +65,11 @@ export const RequestDetailed = (props: IProps) => {
                 </div>
                 <div>
                     <h3>Status:</h3>
-                    <p>{selectedRequest?.status}</p>
+                    <p>{selectedRequest?.status === "done" ? SucessCheck() : Spinner()}{selectedRequest?.status}</p>
                 </div>
                 <div>
                     <h3>Resultado:</h3>
+                    <p>Ocorrências: {selectedRequest?.urls.length}</p>
                     <ul>
                         {selectedRequest?.urls.map(url =>
                             <a href={url} target="blank" key={url}>
@@ -66,6 +82,7 @@ export const RequestDetailed = (props: IProps) => {
                     </Link>
                 </div>
             </section>
+            {window.scrollY > 600 ? renderCta() : null}
         </Main>
     )
 }

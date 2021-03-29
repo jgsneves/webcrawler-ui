@@ -8,7 +8,7 @@ export const StyledSpinner = styled.svg`
   
   & .path {
     stroke: #ff5824;
-    stroke-linecap: round;
+    strokeLinecap: round;
     animation: dash 1.5s ease-in-out infinite;
   }
   
