@@ -1,5 +1,5 @@
 import React from 'react';
-import {Route, Switch} from 'react-router-dom';
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import { Footer } from '../components/footer';
 import { Header } from '../components/header';
 import { Home } from '../pages/home';
@@ -9,7 +9,7 @@ import { Solicitations } from '../pages/solicitations';
 
 const Routes = () => {
     return (
-        <>
+        <BrowserRouter>
             <Header/>
             <Switch>
                 <Route component={RequestDetailed} path="/solicitacoes/:id"/>
@@ -18,7 +18,7 @@ const Routes = () => {
                 <Route component={Home} path="/" exact/>
             </Switch>
             <Footer />
-        </>
+        </BrowserRouter>
     )
 }
 

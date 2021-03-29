@@ -75,6 +75,7 @@ export const NewRequest = () => {
                         {errorData.code !== 0 ? <ErrorMessage>{errorData.name}</ErrorMessage> : null}
                             <input 
                                 type="text"
+                                data-testid="keyword"
                                 id="keyword"
                                 onChange={handleInputChange}
                             />
