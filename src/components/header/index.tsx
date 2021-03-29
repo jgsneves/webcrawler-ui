@@ -1,11 +1,11 @@
 import React from 'react';
-import {HeaderTag} from './styles'; 
+import {HeaderWrapper} from './styles'; 
 import { AxurLogo } from '../logo';
 import { Link } from 'react-router-dom';
 
 export const Header = () => {
     return (
-        <HeaderTag>
+        <HeaderWrapper>
             <Link 
                 to='/'
                 style={{textDecoration: "none", height: "20px"}}
@@ -13,6 +13,6 @@ export const Header = () => {
                 {AxurLogo()}
             </Link>
             <h4>Experiências digitais mais seguras</h4>
-        </HeaderTag>
+        </HeaderWrapper>
     )
 }
