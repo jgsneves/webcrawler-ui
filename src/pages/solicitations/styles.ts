@@ -1,10 +1,11 @@
 import styled from 'styled-components';
 
 export const Main = styled.main`
+    padding-top: 100px;
     width: 700px;
     margin: 0 auto;
     min-height: 375px;
-    padding-bottom: 50px;
+    padding-bottom: 95px;
 
     & > h1 {
         margin-bottom: 8px;

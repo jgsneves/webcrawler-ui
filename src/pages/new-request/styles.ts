@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
 export const Main = styled.main`
+    padding-top: 100px;
+    padding-bottom: 60px;
     margin: 0 auto;
     width: 700px;
     min-height: 375px;
@@ -13,7 +15,6 @@ export const Main = styled.main`
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding-bottom: 50px;
     }
 
     & > form > label {
@@ -65,7 +66,6 @@ export const SpinnerWrapper = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 50px;
 
     & > h3 {
         margin-top: 16px;
