@@ -4,6 +4,7 @@ import { BackIcon } from '../../components/backIcon';
 import { Button } from '../../components/button';
 import { Spinner } from '../../components/spinner';
 import { SucessCheck } from '../../components/sucessCheck';
+import {api} from '../../helper/service';
 import { useRootStore } from '../../provider';
 import {IRequest} from '../../provider/RequestStore';
 import {FixedCTA, Main} from './styles';
@@ -21,7 +22,7 @@ export const RequestDetailed = (props: IProps) => {
     
     React.useEffect(() => {
         async function getData() {
-            return await fetch(`http://testapp.axreng.com:3000/crawl/${id}`).then(res => res.json());
+            return await fetch(`${api}/${id}`).then(res => res.json());
         }
         getData().then((data: IRequest) => {
             const fullData = {
