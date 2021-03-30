@@ -10,7 +10,7 @@ export const Solicitations = () => {
     return useObserver(() => (
         <Main>
             <h1>Solicitações</h1>
-            <p>Confira as solicitações abertas ou busque por palavra-chave</p>
+            <p>Confira as solicitações abertas.</p>
             <article>
                 <TableHeader>
                     <li>id</li>
