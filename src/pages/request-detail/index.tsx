@@ -1,13 +1,12 @@
 import React from 'react';
 import {Link, RouteComponentProps} from 'react-router-dom';
-import { BackIcon } from '../../components/backIcon';
 import { Button } from '../../components/button';
 import { Spinner } from '../../components/spinner';
 import { SucessCheck } from '../../components/sucessCheck';
 import {api} from '../../helper/service';
 import { useRootStore } from '../../provider';
 import {IRequest} from '../../provider/RequestStore';
-import {FixedCTA, Main} from './styles';
+import { Main } from './styles';
 
 type IProps = RouteComponentProps<{id: string}>;
 
@@ -36,17 +35,6 @@ export const RequestDetailed = (props: IProps) => {
         });
     }, [id, fromStore.created, fromStore.keyword, selectedRequest]);
 
-    
-    function renderCta() {
-        return (
-                <FixedCTA>
-                    <Link to="/solicitacoes">
-                        {BackIcon()}
-                        <h4>VOLTAR</h4>
-                    </Link>
-                </FixedCTA>
-        );
-    }
     return (
         <Main>
             <h1>Detalhes da solicitação</h1>

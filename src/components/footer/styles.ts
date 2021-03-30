@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import media from 'styled-media-query';
 
 export const FooterWrapper = styled.footer`
     background-color: #222222;
@@ -6,6 +7,12 @@ export const FooterWrapper = styled.footer`
     & > div {
         width: 700px;
         margin: 0 auto;
+    }
+
+    & > div > p {
+        ${media.lessThan("small")`
+            width: 90vw;
+        `}
     }
 
     & > div > a > svg {

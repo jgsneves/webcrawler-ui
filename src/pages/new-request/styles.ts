@@ -1,10 +1,11 @@
 import styled from 'styled-components';
+import media from 'styled-media-query';
 
 export const Main = styled.main`
     padding-top: 100px;
     padding-bottom: 60px;
     margin: 0 auto;
-    width: 700px;
+    max-width: 700px;
     min-height: 375px;
 
     & > p {
@@ -48,6 +49,10 @@ export const Main = styled.main`
     & > form > label > p {
         margin: 16px 0px;
     }
+
+    ${media.lessThan("small")`
+        min-height: 600px;
+    `}
 `;
 
 export const ErrorMessage = styled.p`

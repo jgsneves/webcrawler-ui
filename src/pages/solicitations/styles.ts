@@ -1,8 +1,9 @@
 import styled from 'styled-components';
+import media from 'styled-media-query';
 
 export const Main = styled.main`
     padding-top: 100px;
-    width: 700px;
+    max-width: 700px;
     margin: 0 auto;
     min-height: 375px;
     padding-bottom: 95px;
@@ -18,6 +19,10 @@ export const Main = styled.main`
     & > article > a > button {
         margin-top: 32px;
     }
+
+    ${media.lessThan("small")`
+        min-height: 600px;
+    `}
 `;
 
 export const TableHeader = styled.ul`
@@ -31,9 +36,17 @@ export const TableHeader = styled.ul`
     margin-top: 32px;
     cursor: default;
 
+    ${media.lessThan("small")`
+        width: 90vw;
+    `}
+
     & > li {
         width: 25%;
         text-align: center;
+
+        ${media.lessThan("small")`
+            width: 85px;
+        `}
 
         :first-child {
             text-align: left;
@@ -54,6 +67,10 @@ export const TableItem = styled.div`
     padding: 10px;
     margin-top: 8px;
     cursor: pointer;
+
+    ${media.lessThan("small")`
+        width: 90vw;
+    `}
 
     & > p {
         width: 25%;
