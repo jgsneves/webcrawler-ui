@@ -40,6 +40,9 @@ export const Main = styled.main`
 
     & > section > div > ul {
         list-style: none;
+        height: 300px;
+        width: inherit;
+        overflow-y: scroll;
     }
 
     & > section > div > a {

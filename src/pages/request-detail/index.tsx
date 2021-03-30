@@ -47,7 +47,6 @@ export const RequestDetailed = (props: IProps) => {
                 </FixedCTA>
         );
     }
-    
     return (
         <Main>
             <h1>Detalhes da solicitação</h1>
@@ -83,7 +82,6 @@ export const RequestDetailed = (props: IProps) => {
                     </Link>
                 </div>
             </section>
-            {window.scrollY > 600 ? renderCta() : null}
         </Main>
     )
 }
