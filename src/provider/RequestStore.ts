@@ -9,7 +9,8 @@ export interface IRequest {
 }
 
 export class RequestStore {
-    @observable requests: IRequest[] = [];
+    storageRequests = localStorage.getItem("@webcrawler: requests");
+    @observable requests: IRequest[] = this.storageRequests ? JSON.parse(this.storageRequests) : [];
 
     @action
     addRequest = (request: IRequest) => {

@@ -51,6 +51,7 @@ export const NewRequest = () => {
 
             requestStore.addRequest(newRequest);
             setStage(EnumStage.success);
+            localStorage.setItem("@webcrawler: requests", JSON.stringify(requestStore.requests));
 
             if (response.status >= 204) {
                 throw new Error("Erro no envio, tente novamente.")
